@@ -1,0 +1,395 @@
+
+<!-- Los comentarios a lo largo del codigo son muy importantes nos ayudan  -->
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Tatuajes</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,800;1,300&display=swap" rel="stylesheet">
+<style>
+h1 {font-family: "Montserrat ExtraBold"}
+h2 {font-family: "Montserrat SemiBold"}
+body {font-family: "Montserrat Regular"}
+</style>
+</head>
+
+<body class="w3-light-grey">
+
+<!-- Navigation bar with social media icons --> 
+
+
+<div class="w3-bar w3-black w3-hide-small">
+  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-facebook-official"></i></a>
+  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-instagram"></i></a>
+  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-snapchat"></i></a>
+  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-flickr"></i></a>
+  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-twitter"></i></a>
+  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-linkedin"></i></a>
+  <a href="#" class="w3-bar-item w3-button w3-right"><i class="fa fa-search"></i></a>
+</div>
+  
+<!-- w3-content defines a container for fixed size centered content, 
+and is wrapped around the whole page content, except for the footer in this example -->
+<div class="w3-content" style="max-width:1600px">
+
+  <!-- Header -->
+  <header class="w3-container w3-center w3-padding-48 w3-white">
+    <h1 class="w3-xxxlarge"><b>Tatuajes</b></h1>
+    <h2>JUAN <span class="w3-tag">Uribe</span></h2>
+  </header>
+
+  <!-- Image header -->
+  <header class="w3-display-container w3-wide" id="home">
+    <img class="w3-image" src="img/BannerTatto.jpg" alt="Fashion Blog" width="1600" height="1060">
+    <div class="w3-display-left w3-padding-large">
+
+      <h1 class="w3-jumbo w3-text-white w3-hide-small"><b>Introducción a los Tatuajes</b></h1>
+      <h6><button class="w3-button w3-white w3-padding-large w3-large w3-opacity w3-hover-opacity-off" onclick="document.getElementById('subscribe').style.display='block'">INCRESAR</button></h6>
+    </div>
+  </header>
+
+  <!-- Grid -->
+  <div class="w3-row w3-padding w3-border">
+
+    <!-- Blog entries -->
+    <div class="w3-col l8 s12">
+    
+      <!-- Blog entry -->
+      <div class="w3-container w3-white w3-margin w3-padding-large">
+        <div class="w3-center">
+          <h2>Historia de los tatuajes</h2>
+          <h5>Un breve resumen desde sus orígenes en diferentes culturas hasta su evolución en la sociedad moderna
+          </h5>
+        </div>
+
+        <div class="w3-justify">
+          <img src="img/HistoriaTatto.png" alt="Girl Hat" style="width:100%" class="w3-padding-16">
+          <p>Los tatuajes tienen una rica historia que se extiende por todo el mundo y se remonta a las civilizaciones antiguas. En Egipto antiguo, se utilizaban para simbolizar estatus social y protección espiritual, mientras que en la cultura polinesia, representaban linaje y rango social, con diseños intrincados y detallados. En China, los tatuajes tenían un uso ritual y, a veces, eran impuestos como castigo. Además, en las diversas tribus indígenas de América del Norte, los tatuajes tenían significados espirituales y culturales únicos. A medida que avanzaba el tiempo, en Occidente, los tatuajes ganaron popularidad en el siglo XVIII y XIX gracias a marineros y exploradores que regresaban con tatuajes de sus viajes, aunque a menudo se percibían como símbolos de rebeldía. Sin embargo, en el siglo XX, durante la Segunda Guerra Mundial, los tatuajes se hicieron más aceptados, convirtiéndose gradualmente en una forma de expresión personal ampliamente aceptada y una manifestación artística en la sociedad moderna. La técnica y la tecnología avanzada han permitido la creación de tatuajes más detallados y coloridos, lo que ha impulsado una próspera industria del tatuaje que celebra la diversidad de diseños y estilos en la actualidad.</p>
+          <p class="w3-left"><button class="w3-button w3-white w3-border" onclick="likeFunction(this)"><b><i class="fa fa-thumbs-up"></i> Me gusta</b></button></p>
+          <p class="w3-right"><button class="w3-button w3-black" onclick="myFunction('demo1')" id="myBtn"><b>Comentarios  </b> <span class="w3-tag w3-white">1</span></button></p>
+          <p class="w3-clear"></p>
+          <div class="w3-row w3-margin-bottom" id="demo1" style="display:none">
+            <hr>
+              <div class="w3-col l2 m3">
+                <img src="img/comentario1.jpg" style="width:90px;">
+              </div>
+              <div class="w3-col l10 m9">
+                <h4>Carlos <span class="w3-opacity w3-medium">May 3, 2006, 6:32 PM</span></h4>
+                <p>No sabia que los tatuajes eran tan antiguos. Genial </p>
+              </div>
+          </div>
+        </div>
+      </div>
+      <hr>
+
+
+
+      <!-- Entrada 1 -->
+      <div class="w3-container w3-white w3-margin w3-padding-large">
+        <div class="w3-center">
+          <h2>Simbolismo de los tatuajes</h2>
+          <h5>Significado y simbolismo detrás de diferentes tipos de tatuajes</h5>
+        </div>
+
+        <div class="w3-justify">
+          <img src="img/simbolismoTatto.jpg" alt="Runway" style="width:100%" class="w3-padding-16">
+          <p>Los tatuajes tienen un profundo significado y simbolismo en función de su diseño y estilo. Los tatuajes tribales, por ejemplo, se inspiran en las tradiciones de diversas culturas indígenas de todo el mundo y a menudo representan la conexión con la tierra y la espiritualidad. Estos diseños suelen simbolizar la fuerza, la valentía y la identidad cultural de quien los lleva. Por otro lado, los tatuajes religiosos son una expresión de fe y devoción hacia una creencia específica. Pueden incluir símbolos religiosos, citas sagradas o representaciones de figuras religiosas, y sirven como recordatorios espirituales y guías morales en la vida de quien los lleva. Por último, los tatuajes de animales pueden tener una variedad de significados, desde la conexión con la naturaleza y la representación de características específicas del animal, hasta simbolizar la lealtad, la protección o la libertad, dependiendo del tipo de animal elegido y su contexto cultural.</p>
+
+          <p>En resumen, los tatuajes son una forma poderosa de comunicar creencias, valores y experiencias personales. Ya sea a través de tatuajes tribales que honran las raíces culturales, tatuajes religiosos que reflejan la espiritualidad o tatuajes de animales que expresan diversos significados, cada diseño lleva consigo una carga de simbolismo que puede ser única y profunda para quienes los portan.</p>
+          <p class="w3-left"><button class="w3-button w3-white w3-border" onclick="likeFunction(this)"><b><i class="fa fa-thumbs-up"></i> Me gusta</b></button></p>
+          <p class="w3-right"><button class="w3-button w3-black" onclick="myFunction('demo3')"><b>Comentarios  </b> <span class="w3-tag w3-white">3</span></button></p>
+          <p class="w3-clear"></p>
+          
+          <!-- Example of comment field -->
+          <div id="demo3" style="display:none">
+            <hr>
+            <div class="w3-row w3-margin-bottom">
+              <div class="w3-col l2 m3">
+                <img src="img/comentario2.jpg" style="width:90px;">
+              </div>
+              <div class="w3-col l10 m9">
+                <h4>Maria<span class="w3-opacity w3-medium">Abril 10, 2015, 7:22 PM</span></h4>
+                <p>Alguien me puede decir que significa la pluma con el infinito jaja</p>
+              </div>
+            
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    <!-- Entrada 2 del Blog -->
+    <div class="w3-container w3-white w3-margin w3-padding-large">
+      <div class="w3-center">
+        <h2>Tipos de tatuajes</h2>
+        <h5>Tatuajes en blanco y negro vs. a color</h5>
+      </div>
+
+      
+        <p>Los tatuajes en blanco y negro y los tatuajes a color ofrecen experiencias visuales distintas y tienen sus propios pros y contras. Los tatuajes en blanco y negro tienden a destacar la precisión de los detalles y las sombras, lo que los hace ideales para diseños realistas y elaborados. Además, suelen envejecer mejor a lo largo del tiempo, ya que los colores no se desvanecen. Sin embargo, pueden carecer de la vibrante expresión que ofrecen los tatuajes a color, que permiten una gama más amplia de creatividad y pueden destacar en diseños más fantasiosos o artísticos.</p>
+        <p>Los tatuajes a color, por otro lado, pueden requerir más retoques a medida que los colores se desvanecen con el tiempo y pueden ser más costosos. La elección entre blanco y negro y color depende en última instancia de la preferencia personal, el estilo deseado y la durabilidad a largo plazo que se busque en el tatuaje.</p>
+        <div class="w3-justify">
+          <img src="img/tatuajes-color-negro.jpg" alt="Runway" style="width:100%" class="w3-padding-16">
+        <p class="w3-left"><button class="w3-button w3-white w3-border" onclick="likeFunction(this)"><b><i class="fa fa-thumbs-up"></i> Me gusta</b></button></p>
+        <p class="w3-right"><button class="w3-button w3-black" onclick="myFunction('demo3')"><b>Comentarios  </b> <span class="w3-tag w3-white">1</span></button></p>
+        <p class="w3-clear"></p>
+        
+        <!-- comentario -->
+        <div id="demo3" style="display:none">
+          <hr>
+          <div class="w3-row w3-margin-bottom">
+            <div class="w3-col l2 m3">
+              <img src="img/comentario3.jpg" style="width:90px;">
+            </div>
+            <div class="w3-col l10 m9">
+              <h4>Maria<span class="w3-opacity w3-medium">Abril 10, 2015, 7:22 PM</span></h4>
+              <p>Me gusta mas los a blanco y negro</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Entrada 3 del Blog -->
+    <div class="w3-container w3-white w3-margin w3-padding-large">
+      <div class="w3-center">
+        <h5>Tatuajes en realismo vs. abstractos</h5>
+      </div>
+
+      
+        <p>La diferencia clave entre los tatuajes realistas que imitan fotografías y los tatuajes estilizados que son más abstractos radica en su enfoque artístico y estilístico. Los tatuajes realistas se esfuerzan por replicar con precisión la apariencia de una fotografía o imagen en la piel, utilizando sombreado y detalles meticulosos para lograr un alto grado de fidelidad visual. Estos tatuajes tienden a ser altamente detallados y pueden capturar con precisión la textura y los matices de la imagen original.</p>
+        <p>Por otro lado, los tatuajes estilizados se apartan de la representación exacta y optan por una interpretación más creativa y abstracta del tema. Aquí, el tatuador puede simplificar formas, utilizar colores no realistas o aplicar técnicas artísticas únicas para lograr una expresión más artística y subjetiva. En última instancia, la elección entre realismo y estilo estilizado depende del gusto personal y de la preferencia por la fidelidad visual frente a la expresión artística y la interpretación creativa.</p>
+        <div class="w3-justify">
+          <img src="img/realismo.jpg" alt="Runway" style="width:100%" class="w3-padding-16">
+        <p class="w3-left"><button class="w3-button w3-white w3-border" onclick="likeFunction(this)"><b><i class="fa fa-thumbs-up"></i> Me gusta</b></button></p>
+        <p class="w3-right"><button class="w3-button w3-black" onclick="myFunction('demo3')"><b>Comentarios  </b> <span class="w3-tag w3-white">1</span></button></p>
+        <p class="w3-clear"></p>
+        
+        <!-- comentario -->
+        <div id="demo3" style="display:none">
+          <hr>
+          <div class="w3-row w3-margin-bottom">
+            <div class="w3-col l2 m3">
+              <img src="img/comentario3.jpg" style="width:90px;">
+            </div>
+            <div class="w3-col l10 m9">
+              <h4>Maria<span class="w3-opacity w3-medium">Abril 10, 2015, 7:22 PM</span></h4>
+              <p>Me gusta mas los a blanco y negro</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Entrada 4 del Blog -->
+    <div class="w3-container w3-white w3-margin w3-padding-large">
+      <div class="w3-center">
+        <h5>Tatuajes en acuarela</h5>
+      </div>
+
+      
+        <p>Los tatuajes de acuarela son un tipo de obra maestra en la piel que captura la esencia efímera y libre de la pintura acuarela. Lo que los hace excepcionales es su capacidad para emular la fluidez y la delicadeza de la acuarela en un medio tan intrínsecamente diferente como la piel. Estos tatuajes se caracterizan por su paleta de colores vibrantes y difuminados, con transiciones suaves y líneas que a menudo se desvanecen en el papel de la piel.</p>
+        <p>La técnica detrás de los tatuajes de acuarela requiere una habilidad excepcional por parte del tatuador para mezclar los colores de manera armoniosa y lograr una apariencia similar a la acuarela. El resultado final es una obra de arte que parece pintada a mano en la piel, con una estética orgánica y fluida que evoca una sensación de belleza y movimiento únicos en el mundo del tatuaje</p>
+        
+        <div class="w3-justify">
+          <img src="img/acuarela.jpg" alt="Runway" style="width:100%" class="w3-padding-16">
+        <p class="w3-left"><button class="w3-button w3-white w3-border" onclick="likeFunction(this)"><b><i class="fa fa-thumbs-up"></i> Me gusta</b></button></p>
+        <p class="w3-right"><button class="w3-button w3-black" onclick="myFunction('demo3')"><b>Comentarios </b> <span class="w3-tag w3-white">1</span></button></p>
+        <p class="w3-clear"></p>
+        
+        <!-- comentario -->
+        <div id="demo3" style="display:none">
+          <hr>
+          <div class="w3-row w3-margin-bottom">
+            <div class="w3-col l2 m3">
+              <img src="img/comentario3.jpg" style="width:90px;">
+            </div>
+            <div class="w3-col l10 m9">
+              <h4>Maria<span class="w3-opacity w3-medium">Abril 10, 2015, 7:22 PM</span></h4>
+              <p>Me gusta mas los a blanco y negro</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Entrada 5 del Blog -->
+    <div class="w3-container w3-white w3-margin w3-padding-large">
+      <div class="w3-center">
+        <h5>Tatuajes geometricos</h5>
+      </div>
+
+      
+        <p>El auge de los tatuajes geométricos ha sido una tendencia destacada en el mundo del tatuaje en las últimas décadas. Estos diseños se distinguen por su enfoque en la precisión matemática y la armonía de las formas y patrones geométricos. Los tatuajes geométricos se basan en líneas nítidas, ángulos exactos y simetría, creando composiciones visuales que a menudo parecen intrincadas y casi hipnóticas. Los elementos geométricos, como triángulos, círculos y líneas, se combinan de manera creativa para formar diseños únicos y significativos.</p>
+        <p>Además de su atractivo estético, los tatuajes geométricos a menudo tienen significados profundos para quienes los llevan, representando la precisión, el equilibrio y la estructura en sus vidas, así como la fascinación por la geometría y la geometría sagrada. Esta tendencia continúa evolucionando con nuevas interpretaciones y variaciones, lo que demuestra su duradera popularidad en la cultura del tatuaje</p>
+        
+        <div class="w3-justify">
+          <img src="img/geometricos.png" alt="Runway" style="width:100%" class="w3-padding-16">
+        <p class="w3-left"><button class="w3-button w3-white w3-border" onclick="likeFunction(this)"><b><i class="fa fa-thumbs-up"></i>Me gusta</b></button></p>
+        <p class="w3-right"><button class="w3-button w3-black" onclick="myFunction('demo3')"><b>Comentarios  </b> <span class="w3-tag w3-white">1</span></button></p>
+        <p class="w3-clear"></p>
+        
+        <!-- comentario -->
+        <div id="demo3" style="display:none">
+          <hr>
+          <div class="w3-row w3-margin-bottom">
+            <div class="w3-col l2 m3">
+              <img src="img/comentario3.jpg" style="width:90px;">
+            </div>
+            <div class="w3-col l10 m9">
+              <h4>Maria<span class="w3-opacity w3-medium">Abril 10, 2015, 7:22 PM</span></h4>
+              <p>Me gusta mas los a blanco y negro</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- FIN DE ENTRADAS BLOG -->
+    </div>
+
+    
+    <!-- About/Information menu -->
+    <div class="w3-col l4">
+      <!-- About Card -->
+      <div class="w3-white w3-margin">
+        <img src="img/comentario3.jpg" alt="Jane" style="width:100%" class="w3-grayscale">
+        <div class="w3-container w3-black">
+          <h4>@AlexaTatto</h4>
+          <p>Tatuadora profesional que usa el realismo como su tecnica principal</p>
+        </div>
+      </div>
+      <hr>
+
+      <!-- Posts -->
+      <div class="w3-white w3-margin">
+        <div class="w3-container w3-padding w3-black">
+          <h4>Comentarios</h4>
+        </div>
+        <ul class="w3-ul w3-hoverable w3-white">
+          <li class="w3-padding-16">
+            <img src="img/albeiro.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+            <span class="w3-large">Javier</span>
+            <br>
+            <span>Nunca pense que existieran mas tecnicas, solo conocia el realismo.</span>
+          </li>
+          <li class="w3-padding-16">
+            <img src="img/victoria.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+            <span class="w3-large">Victoria</span>
+            <br>
+            <span>Mi tatuador es muy pro, cuando quieran les paso su contacto para que los asesore</span>
+          </li>
+          <li class="w3-padding-16">
+            <img src="img/javier.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+            <span class="w3-large">Albeiro</span>
+            <br>
+            <span>Que necesidad de dañar el cuerpo asi por DIOS!!!</span>
+          </li>
+          <li class="w3-padding-16">
+            <img src="img/Marcela.jpg" alt="Image" class="w3-left w3-margin-right w3-sepia" style="width:50px">
+            <span class="w3-large">Marcela</span>
+            <br>
+            <span>La vida es muy corta para no tener el cuerpo lleno de tatuajes jaja</span>
+          </li>
+        </ul>
+      </div>
+      <hr>
+  
+
+      <!-- Tags -->
+      <div class="w3-white w3-margin">
+        <div class="w3-container w3-padding w3-black">
+          <h4>Tags</h4>
+        </div>
+        <div class="w3-container w3-white">
+          <p>
+            <span class="w3-tag w3-black w3-margin-bottom">#Tatuajes</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Loki</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Tokio</span>
+            <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">#ArteDelTatuaje</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Midgard</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Odin</span>
+            <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">#DiseñoDeTatuajes</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Ragnarok</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Regresar</span>
+            <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">#TatuajesRealistas</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Paranormal</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Dizfras</span>
+            <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">#TatuajesUnicos</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Muñecas que hablan</span>
+          </p>
+        </div>
+      </div>
+      <hr>
+
+      <!-- Inspiration -->
+      <div class="w3-white w3-margin">
+        <div class="w3-container w3-padding w3-black">
+          <h4>Inspiración</h4>
+        </div>
+        <div class="w3-row-padding w3-white">
+          <div class="w3-col s6">
+            <p><img src="img/inspiracion1.jpg" alt="Jeans" style="width:100%"></p>
+            <p><img src="img/inspiracion2.jpg" alt="Jeans" style="width:100%"></p>
+          </div>
+          <div class="w3-col s6">
+            <p><img src="img/inspiracion3.webp" alt="Men in Hats" style="width:100%" class="w3-grayscale"></p>
+            <p><img src="img/inspiracion4.jpg" alt="Jeans" style="width:100%"></p>
+        </div>
+        </div>
+      </div>
+      <hr>
+      
+      <!-- Subscribete -->
+      <div class="w3-white w3-margin">
+        <div class="w3-container w3-padding w3-black">
+          <h4>SUSCRIBETE</h4>
+        </div>
+        <div class="w3-container w3-white">
+          <p>Ingresa tu email para que no pierdas las ultimas actualizaciones de este blog.</p>
+          <p><input class="w3-input w3-border" type="text" placeholder="Enter e-mail" style="width:100%"></p>
+          <p><button type="button" onclick="document.getElementById('subscribe').style.display='block'" class="w3-button w3-block w3-red">Suscribete</button></p>
+        </div>
+      </div>
+
+    <!-- END About/Intro Menu -->
+    </div>
+
+  <!-- END GRID -->
+  </div>
+
+<!-- END w3-content -->
+</div>
+
+<!-- Subscribe Modal -->
+<div id="subscribe" class="w3-modal w3-animate-opacity">
+  <div class="w3-modal-content" style="padding:32px">
+    <div class="w3-container w3-white">
+      <i onclick="document.getElementById('subscribe').style.display='none'" class="fa fa-remove w3-transparent w3-button w3-xlarge w3-right"></i>
+      <h2 class="w3-wide">SUSCRIBETE</h2>
+      <p>Ingresa tu email para que no pierdas las ultimas actualizaciones de este blog.</p>
+      <p><input class="w3-input w3-border" type="text" placeholder="Enter e-mail"></p>
+      <button type="button" class="w3-button w3-block w3-padding-large w3-red w3-margin-bottom" onclick="document.getElementById('subscribe').style.display='none'">Suscribete </button>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="w3-container " style="padding:32px">
+  <a href="#" class="w3-button w3-black w3-padding-large w3-margin-bottom"><i class="fa fa-arrow-up w3-margin-right"></i>Volver al inicio</a>
+</footer>
+
+<script>
+// Toggle between hiding and showing blog replies/comments
+document.getElementById("myBtn").click();
+function myFunction(id) {
+  var x = document.getElementById(id);
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+
+function likeFunction(x) {
+  x.style.fontWeight = "bold";
+  x.innerHTML = "✓ me gusta";
+}
+</script>
+
+</body>
+</html>
